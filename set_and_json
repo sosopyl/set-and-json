@@ -1,0 +1,213 @@
+//set
+
+//38
+// let arr = [1, 2, 3, 1, 3, 4];
+// let set = new Set(arr);
+// console.log(set)
+
+// let set = new Set;
+// set.add(1);
+// set.add(2);
+// set.add(3);
+// console.log(set)
+
+// let set = new Set([1, 2, 3]);
+// set.add(3);
+// console.log(set)
+
+//39
+// let set = new Set([1, 2, 3]);
+// console.log(set.size);
+
+// if(set.has(3)){console.log('yes')} 
+// else{console.log('no')}
+// if(set.has(4)){console.log('yes')} 
+// else{console.log('no')}
+
+//40
+// let set = new Set([1, 2, 3]);
+// let sum = 0
+// for(let elem of set){
+//     sum += elem
+// }
+// console.log(sum)
+
+//42
+
+// function noDubles(arr){
+//     let res = [...new Set(arr)];
+//     return res
+// }
+// console.log(noDubles([1, 2, 2, 3]))
+
+// let btn = document.querySelector('input')
+// let elems = document.querySelectorAll('p')
+
+// let set = new Set();
+
+// for(let elem of elems){
+//     elem.addEventListener('click', function(){
+//         set.add(this);
+//     })
+// }
+// btn.addEventListener('click', function(){
+//     for(let elem of set){
+// 		elem.textContent = elem.textContent 
+// 			+ '!'; 
+//     }
+// })
+
+///json
+
+//43
+// let arr = [1, 2, 3, 'a', 'b', 'c'];
+// let json = '[1, 2, 3, "a", "b", "c"];'
+
+// let obj = {
+// 	a: 1,
+// 	b: 2,
+// 	c: 'eee',
+// 	d: true,
+// };
+// let json = `{
+// 	a: 1,
+// 	b: 2,
+// 	c: "eee",
+// 	d: true
+// }`;
+
+// let obj = {
+// 	a: ['a', 'b', 'c',],
+// 	b: '111',
+// 	c: 'eee',
+// };
+// let json = `{
+// 	a: ["a", "b", "c"],
+// 	b: "111",
+// 	c: "eee"
+// }`;
+
+//44
+//1
+// let json = '[1,2,3,4,5]';
+// let arr = JSON.parse(json);
+// let res = 0;
+// for(let elem of arr)
+// {res+=elem}
+// console.log(res)
+//2
+// let json = `{
+// 	"data1": [1,2,3],
+// 	"data2": [4,5,6],
+// 	"data3": [7,8,9]
+// }`;
+// let arr = Object.values(JSON.parse(json));
+// let sum = 0
+// for(let elems of arr){
+//     for (let elem of elems){
+//         sum += elem
+//     }
+// }
+// console.log(sum)
+
+//3
+// let json = '["user1","user2","user3","user4","user5"]';
+// let arr = JSON.parse(json);
+// let ul = document.createElement('ul')
+// for(let elem of arr){
+//     let li = document.createElement('li')
+//     li.textContent = elem
+//     ul.appendChild(li)
+// }
+// console.log(ul)
+
+//4
+// let json = `[
+// 	{
+// 		"name": "user1",
+// 		"age": 25,
+// 		"salary": 1000
+// 	},
+// 	{
+// 		"name": "user2",
+// 		"age": 26,
+// 		"salary": 2000
+// 	},
+// 	{
+// 		"name": "user3",
+// 		"age": 27,
+// 		"salary": 3000
+// 	}
+// ]`;
+// let body = document.querySelector('body')
+// let arr = JSON.parse(json);
+// let table = document.createElement('table')
+// for(let user of arr){
+//     let tr = document.createElement('tr')
+
+//     let tname = document.createElement('td');
+//     tname.textContent = user.name;
+//     tr.appendChild(tname);
+
+//     let tage = document.createElement('td');
+//     tage.textContent = user.age;
+//     tr.appendChild(tage);
+    
+//     let tsalary = document.createElement('td');
+//     tsalary.textContent = user.salary;
+//     tr.appendChild(tsalary);
+
+//     table.appendChild(tr);
+// }
+// console.log(table)
+// body.appendChild(table)
+
+//45
+// let json = ['user1', 'user2', 'user3', 
+// 	'user4', 'user5']; 
+// let arr = JSON.stringify(json);
+
+// let list = document.querySelectorAll('li')
+// let arr = [];
+// for(let elem of list){
+//     arr.push(elem.textContent);
+// }
+// let json = JSON.stringify(arr)
+// console.log(json)
+
+//46
+// let json = '["user1","user2","user3","user4","user5"]';
+// let arr = JSON.parse(json)
+// arr.push('user6')
+// let res = JSON.stringify(arr)
+
+// let json = '["user1","user2","user3","user4","user5"]';
+// let arr = JSON.parse(json)
+// arr[1] = "new user"
+// let res = JSON.stringify(arr)
+
+// let json = `[
+// 	{
+// 		"name": "user1",
+// 		"age": 25,
+// 		"salary": 1000
+// 	},
+// 	{
+// 		"name": "user2",
+// 		"age": 26,
+// 		"salary": 2000
+// 	},
+// 	{
+// 		"name": "user3",
+// 		"age": 27,
+// 		"salary": 3000
+// 	}
+// ]`;
+// let arr = JSON.parse(json)
+// let elem = {
+//     "name": "user4",
+//     "age": 28,
+//     "salary8": 4000
+// }
+// arr.push(elem)
+// let res = JSON.stringify(arr)
